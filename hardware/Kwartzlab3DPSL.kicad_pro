@@ -53,8 +53,71 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "lib_footprint_issues|123356602|31350552|b662e789-f537-4823-9450-cb28ad8f2db6|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_edge_clearance|116005000|29075000|b2bde0c8-988a-4f2a-bdc0-50ec0fb5c79a|abc55c9b-d0ac-4bd5-8eee-c0a98512e198",
+          ""
+        ],
+        [
+          "silk_edge_clearance|116005000|29090000|b2bde0c8-988a-4f2a-bdc0-50ec0fb5c79a|1ecef5b9-b656-44f2-a546-4c85e5a173ac",
+          ""
+        ],
+        [
+          "silk_edge_clearance|116107500|67875000|516e5ab9-44f6-4cd2-9d4d-9dce034dc52d|79bfe6bd-f327-4709-8976-36224973beef",
+          ""
+        ],
+        [
+          "silk_edge_clearance|116892500|67875000|516e5ab9-44f6-4cd2-9d4d-9dce034dc52d|3102fbba-0914-47ca-a531-34abd2f219e2",
+          ""
+        ],
+        [
+          "silk_edge_clearance|132928600|67292318|df13b278-28f5-4613-9864-18c00fd8ff4a|56d01049-1ad2-43fb-a574-b142c4d45be4",
+          ""
+        ],
+        [
+          "silk_edge_clearance|132950000|51777500|0d1f7191-2a94-4f70-951d-ebce572bf83c|4486fbfc-14ca-4b59-8c42-b9a50ce8caa7",
+          ""
+        ],
+        [
+          "silk_edge_clearance|85542000|46372400|4b0614a5-6c6f-4e3c-bf27-6f3721e93d4a|206a00c5-ba37-4727-aaf4-5b3c23663bac",
+          ""
+        ],
+        [
+          "silk_edge_clearance|85542000|46372400|4b0614a5-6c6f-4e3c-bf27-6f3721e93d4a|4fe3ac86-6feb-4c69-90de-724beca81e13",
+          ""
+        ],
+        [
+          "silk_edge_clearance|85542000|55532400|4b0614a5-6c6f-4e3c-bf27-6f3721e93d4a|cde9f2d0-b685-4540-84c9-d93d4b3ff780",
+          ""
+        ],
+        [
+          "silk_edge_clearance|98005000|29075000|b2bde0c8-988a-4f2a-bdc0-50ec0fb5c79a|369ce883-3b24-4f62-b4b0-56a779b30585",
+          ""
+        ],
+        [
+          "starved_thermal|118330000|35910000|7656f13a-152b-4726-808c-8830960a4afb|2fc69fd5-7083-444c-8752-0e361c5061f5|B.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|118625000|49700000|7656f13a-152b-4726-808c-8830960a4afb|3637c369-d32d-45c3-948b-ae9433e5fd4b|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|93269000|30240000|7656f13a-152b-4726-808c-8830960a4afb|1e1b3703-6db1-48bf-a35d-b2b0c41de2e0|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -124,7 +187,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.1905,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -137,8 +200,8 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
-        "min_via_annular_width": 0.1,
+        "min_track_width": 0.2032,
+        "min_via_annular_width": 0.2032,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -187,7 +250,13 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2032,
+        0.254,
+        0.3048,
+        0.508
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -214,7 +283,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -501,7 +575,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.6,
+        "via_diameter": 0.75,
         "via_drill": 0.3,
         "wire_width": 6
       }
@@ -515,10 +589,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
+      "pos_files": "",
       "specctra_dsn": "",
+      "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
