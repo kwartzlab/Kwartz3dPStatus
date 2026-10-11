@@ -660,7 +660,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "cam/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -787,7 +787,7 @@
         "uuid": "020d6fe5-b860-46b9-ae8a-f1e03f7ea4c6"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R7",
     "variants": []
   },
   "sheets": [
