@@ -146,6 +146,10 @@
           ""
         ],
         [
+          "silk_edge_clearance|124297000|74947403|516e5ab9-44f6-4cd2-9d4d-9dce034dc52d|cadc16e5-2fbb-4252-ac91-d4ae7283a64c",
+          ""
+        ],
+        [
           "silk_edge_clearance|132950000|51777500|0d1f7191-2a94-4f70-951d-ebce572bf83c|4486fbfc-14ca-4b59-8c42-b9a50ce8caa7",
           ""
         ],
@@ -166,7 +170,15 @@
           ""
         ],
         [
+          "silk_edge_clearance|94677000|74947403|516e5ab9-44f6-4cd2-9d4d-9dce034dc52d|3a549ee0-83cf-4fb7-a7c8-289cd646dfbb",
+          ""
+        ],
+        [
           "silk_edge_clearance|98005000|29075000|b2bde0c8-988a-4f2a-bdc0-50ec0fb5c79a|369ce883-3b24-4f62-b4b0-56a779b30585",
+          ""
+        ],
+        [
+          "starved_thermal|116500000|63982500|7656f13a-152b-4726-808c-8830960a4afb|8677741a-2444-49c8-b417-6a1db3864ec6|B.Cu",
           ""
         ],
         [
@@ -179,6 +191,10 @@
         ],
         [
           "starved_thermal|94640600|30240000|7656f13a-152b-4726-808c-8830960a4afb|1e1b3703-6db1-48bf-a35d-b2b0c41de2e0|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|96125800|44729400|7656f13a-152b-4726-808c-8830960a4afb|11b4c787-b168-447e-a19b-b6b22062197e|F.Cu",
           ""
         ],
         [
@@ -787,7 +803,7 @@
         "uuid": "020d6fe5-b860-46b9-ae8a-f1e03f7ea4c6"
       }
     ],
-    "used_designators": "R7",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
