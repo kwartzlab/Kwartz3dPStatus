@@ -3,14 +3,10 @@
 #include <ESPAsyncWebServer.h>
 #include "Printer.h"
 
-uint8_t heartbeatCycles;
-
 void setup() {
   delay(1000);
-  heartbeatCycles = 0;
 
   LEDInit();
-
   SerialInit();
   StorageInit();
   WiFiInit();
