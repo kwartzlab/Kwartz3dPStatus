@@ -4,6 +4,7 @@ This is firmware for the hardware that's contained in the same repo. To reprogra
 
 1. Ensure you have the following:
     - Arduino IDE 2.3 or higher
+	- The Arduino ESP32 core ("esp32 by Espressif Systems") version 3.3 or higher
     - The arduino-littlefs-upload plugin (https://github.com/earlephilhower/arduino-littlefs-upload)
     - The following Arduino libraries:
       - PicoMQTT
