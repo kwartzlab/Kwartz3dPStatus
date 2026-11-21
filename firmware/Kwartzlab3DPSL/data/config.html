@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Kwartzlab 3D Printer Status Lights</title>
+  <link href="3dpsl.css" rel="stylesheet">
+ </head>
+ <body>
+  <div class="header">
+   <img src="logo.svg" style="width: 2cm; height: 2cm;" alt="Kwartzlab Logo">
+   <h1>Kwartzlab 3D Printer Status Light System - Configuration</h1>
+  </div>
+  <div class="toolbar">
+    <a href="index.html">Status</a>
+	<a href="tools.html">Tools</a>
+	<a href="config.html">Configuration</a>
+  </div>
+  
+  <h2>Printer/LED Mapping</h2>
+  <form method="post" action="/mappings.action">
+   <ul style="list-style: none;">
+    <li>Printer 1:
+     <select name="printer1">
+ 	  <option value="0" %PRINTER1LED0%>Not Present</option>
+      <option value="1" %PRINTER1LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER1LED2%>LED 2</option>
+      <option value="3" %PRINTER1LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER1LED4%>LED 4</option>
+      <option value="5" %PRINTER1LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER1LED6%>LED 6</option>
+      <option value="7" %PRINTER1LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER1LED8%>LED 8</option>
+      <option value="9" %PRINTER1LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 2:
+     <select name="printer2">
+ 	  <option value="0" %PRINTER2LED0%>Not Present</option>
+      <option value="1" %PRINTER2LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER2LED2%>LED 2</option>
+      <option value="3" %PRINTER2LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER2LED4%>LED 4</option>
+      <option value="5" %PRINTER2LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER2LED6%>LED 6</option>
+      <option value="7" %PRINTER2LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER2LED8%>LED 8</option>
+      <option value="9" %PRINTER2LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 3:
+     <select name="printer3">
+ 	  <option value="0">Not Present</option>
+ 	  <option value="0" %PRINTER3LED0%>Not Present</option>
+      <option value="1" %PRINTER3LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER3LED2%>LED 2</option>
+      <option value="3" %PRINTER3LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER3LED4%>LED 4</option>
+      <option value="5" %PRINTER3LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER3LED6%>LED 6</option>
+      <option value="7" %PRINTER3LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER3LED8%>LED 8</option>
+      <option value="9" %PRINTER3LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 4:
+     <select name="printer4">
+ 	  <option value="0" %PRINTER4LED0%>Not Present</option>
+      <option value="1" %PRINTER4LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER4LED2%>LED 2</option>
+      <option value="3" %PRINTER4LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER4LED4%>LED 4</option>
+      <option value="5" %PRINTER4LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER4LED6%>LED 6</option>
+      <option value="7" %PRINTER4LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER4LED8%>LED 8</option>
+      <option value="9" %PRINTER4LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 5:
+     <select name="printer5">
+ 	  <option value="0" %PRINTER5LED0%>Not Present</option>
+      <option value="1" %PRINTER5LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER5LED2%>LED 2</option>
+      <option value="3" %PRINTER5LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER5LED4%>LED 4</option>
+      <option value="5" %PRINTER5LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER5LED6%>LED 6</option>
+      <option value="7" %PRINTER5LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER5LED8%>LED 8</option>
+      <option value="9" %PRINTER5LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 6:
+     <select name="printer6">
+ 	  <option value="0" %PRINTER6LED0%>Not Present</option>
+      <option value="1" %PRINTER6LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER6LED2%>LED 2</option>
+      <option value="3" %PRINTER6LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER6LED4%>LED 4</option>
+      <option value="5" %PRINTER6LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER6LED6%>LED 6</option>
+      <option value="7" %PRINTER6LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER6LED8%>LED 8</option>
+      <option value="9" %PRINTER6LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 7:
+     <select name="printer7">
+ 	  <option value="0" %PRINTER7LED0%>Not Present</option>
+      <option value="1" %PRINTER7LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER7LED2%>LED 2</option>
+      <option value="3" %PRINTER7LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER7LED4%>LED 4</option>
+      <option value="5" %PRINTER7LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER7LED6%>LED 6</option>
+      <option value="7" %PRINTER7LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER7LED8%>LED 8</option>
+      <option value="9" %PRINTER7LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 8:
+     <select name="printer8">
+ 	  <option value="0" %PRINTER8LED0%>Not Present</option>
+      <option value="1" %PRINTER8LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER8LED2%>LED 2</option>
+      <option value="3" %PRINTER8LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER8LED4%>LED 4</option>
+      <option value="5" %PRINTER8LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER8LED6%>LED 6</option>
+      <option value="7" %PRINTER8LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER8LED8%>LED 8</option>
+      <option value="9" %PRINTER8LED9%>LED 9</option>
+     </select>
+    </li>
+    <li>Printer 9:
+     <select name="printer9">
+ 	  <option value="0" %PRINTER9LED0%>Not Present</option>
+      <option value="1" %PRINTER9LED1%>LED 1</option>
+ 	  <option value="2" %PRINTER9LED2%>LED 2</option>
+      <option value="3" %PRINTER9LED3%>LED 3</option>
+ 	  <option value="4" %PRINTER9LED4%>LED 4</option>
+      <option value="5" %PRINTER9LED5%>LED 5</option>
+ 	  <option value="6" %PRINTER9LED6%>LED 6</option>
+      <option value="7" %PRINTER9LED7%>LED 7</option>
+ 	  <option value="8" %PRINTER9LED8%>LED 8</option>
+      <option value="9" %PRINTER9LED9%>LED 9</option>
+     </select>
+    </li>
+    <li><button type="submit">Set Mappings</button></li>
+   </ul>
+  </form>
+ </body>
+</html>

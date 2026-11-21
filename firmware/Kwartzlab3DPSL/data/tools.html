@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Kwartzlab 3D Printer Status Lights</title>
+  <link href="3dpsl.css" rel="stylesheet">
+ </head>
+ <body>
+  <div class="header">
+   <img src="logo.svg" style="width: 2cm; height: 2cm;" alt="Kwartzlab Logo">
+   <h1>Kwartzlab 3D Printer Status Light System - Tools</h1>
+  </div>
+  <div class="toolbar">
+    <a href="index.html">Status</a>
+	<a href="tools.html">Tools</a>
+	<a href="config.html">Configuration</a>
+  </div>
+  
+  <h2>LED Test</h2>
+  <form method="post" action="/ledtest.action">
+   Set 
+   <select name="led">
+    <option value="1">LED 1</option>
+    <option value="2">LED 2</option>
+    <option value="3">LED 3</option>
+    <option value="4">LED 4</option>
+    <option value="5">LED 5</option>
+    <option value="6">LED 6</option>
+    <option value="7">LED 7</option>
+    <option value="8">LED 8</option>
+    <option value="9">LED 9</option>
+   </select>
+   to
+   <select name="colour">
+    <option value="0,0,0">off</option>
+    <option value="255,0,0">red</option>
+    <option value="0,255,0">green</option>
+    <option value="0,0,255">blue</option>
+    <option value="255,255,0">yellow</option>
+    <option value="0,255,255">teal</option>
+    <option value="255,0,255">purple</option>
+    <option value="255,255,255">white</option>
+   </select>
+   <button type="submit">Set LED Now</button>
+  </form>
+  
+  <h2>Manual Status Update</h2>
+  <form method="post" action="/manualupdate.action">
+   <select name="printer">
+    <option value="1">Printer 1</option>
+    <option value="2">Printer 2</option>
+    <option value="3">Printer 3</option>
+    <option value="4">Printer 4</option>
+    <option value="5">Printer 5</option>
+    <option value="6">Printer 6</option>
+    <option value="7">Printer 7</option>
+    <option value="8">Printer 8</option>
+    <option value="9">Printer 9</option>
+   </select>
+   is
+   <select name="status">
+    <option value="printing">printing</option>
+    <option value="cancelled">cancelled</option>
+    <option value="done">done</option>
+	<option value="paused">paused</option>
+	<option value="error">error</option>
+    <option value="claimed">claimed</option>
+   </select>
+   <button type="submit">Set Printer Status</button>
+  </form>
+ </body>
+</html>
