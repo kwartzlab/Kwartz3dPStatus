@@ -1,6 +1,12 @@
 # Kwartlab 3D Printer Status Light System - Firmware
 
-This is firmware for the hardware that's contained in the same repo. To reprogram the controller board:
+This is firmware for the hardware that's contained in the same repo.
+
+## AI/LLM Policy
+
+No LLMs/"AI" should be used for this project, human contributions only.
+
+## To reprogram the controller board:
 
 1. Ensure you have the following:
     - Arduino IDE 2.3 or higher
@@ -24,3 +30,21 @@ This is firmware for the hardware that's contained in the same repo. To reprogra
 	1. Access the web interface of the controller, and under the Tools section select Launch Update Tool.
 	1. Browse for the firmware image, which is called "Kwartzlab3DPSL.ino.bin" in the "build" directory under the sketch directory, and click "Update Firmware".
 	1. Browse for the filesystem image, which is called "mklittlefs.bin" in the sketch directory, and click "Update FileSystem".
+
+## Interfaces
+
+- USB Serial - Low-level setup, to configure the WiFi itself and such. Connect to a computer and it'll show up a USB serial (CDC) port, type 'help' for details.
+- Web - General configuration, troubleshooting, firmware updates, etc. Listens on port 80.
+- MQTT - Receives updates about printer status changes to actually control the lights.
+
+## MQTT Interface
+- Runs its own broker, so you can connect to the controller board on tcp/1883 and send messages directly to it
+- Send plain text messages to printer/[printer number]/print_status to update the current state of the printer
+  - "printing" for when a job starts printing
+  - "done" for when a job completes
+  - "cancelled" for when a job is cancelled
+  - "error" when a job experiences an error and the printer is currently not printing due to it
+  - "paused" if a job is manually paused
+- Send plain text messages to printer/[printer number]/claim_status to update whether the currently-running job is claimed or not
+  - "claimed" to claim a job
+  - "unclaimed" to un-claim a job (claim status is also automatically reset when a print is done or cancelled)

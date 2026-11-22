@@ -1,0 +1,1 @@
+No LLMs should be used to develop for this project. Human contributions only.
