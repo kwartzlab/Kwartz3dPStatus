@@ -1,4 +1,7 @@
+#include <ESPAsyncHTTPUpdateServer.h>
+
 AsyncWebServer WebServer(80);
+ESPAsyncHTTPUpdateServer HttpUpdater;
 
 void WebActionManualUpdate(AsyncWebServerRequest *request) {
   if(!request->hasParam("printer", true) || !request->hasParam("status", true)) {
@@ -139,5 +142,6 @@ void WebInit(void) {
   WebServer.on("/ledtest.action", HTTP_POST, WebActionLedTest);
   WebServer.on("/mappings.action", HTTP_POST, WebActionMappings);
 
+  HttpUpdater.setup(&WebServer);
   WebServer.begin();
 }
