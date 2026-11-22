@@ -31,6 +31,12 @@ No LLMs/"AI" should be used for this project, human contributions only.
 	1. Browse for the firmware image, which is called "Kwartzlab3DPSL.ino.bin" in the "build" directory under the sketch directory, and click "Update Firmware".
 	1. Browse for the filesystem image, which is called "mklittlefs.bin" in the sketch directory, and click "Update FileSystem".
 
+## Status LED
+- Blue - Booting, trying to connect to WiFi
+- Red - Unable to connect to WiFi or get an IP via DHCP, check WiFi system or connect controller via USB to reconfigure WiFi parameters
+- Two quick green flahes every few seconds - Normal status, controller is in service
+- Purple - OTA firmware update in progress
+
 ## Interfaces
 
 - USB Serial - Low-level setup, to configure the WiFi itself and such. Connect to a computer and it'll show up a USB serial (CDC) port, type 'help' for details.
