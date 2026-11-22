@@ -17,6 +17,7 @@ void setup() {
 
 void loop() {
   LedStatusHeartbeat();
+  LedHandleFlashing();
   SerialLoop();
   MqttLoop();
   delay(100);

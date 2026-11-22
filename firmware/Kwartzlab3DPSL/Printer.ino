@@ -1,3 +1,9 @@
+struct PrinterStatus {
+  uint8_t     led;
+  PrintState  current_state;
+  bool        claimed;
+};
+
 struct PrinterStatus Printers[10];
 
 void PrinterInit(void) {
@@ -36,7 +42,7 @@ void PrinterUpdateState(uint8_t printerNbr, PrintState state) {
   if(Printers[printerNbr].current_state == STATE_IDLE) Printers[printerNbr].claimed = false;
   Serial.printf("Setting printer %d state to %d\n", printerNbr, state);
 
-  LedSetPrinterStatus(PrinterGetMapping(printerNbr), &Printers[printerNbr]);
+  PrinterSetLeds(PrinterGetMapping(printerNbr), &Printers[printerNbr]);
 }
 
 PrintState PrinterGetState(uint8_t printerNbr) {
@@ -46,7 +52,7 @@ PrintState PrinterGetState(uint8_t printerNbr) {
 void PrinterUpdateClaimed(uint8_t printerNbr, bool claimed) {
   Printers[printerNbr].claimed = claimed;
 
-  LedSetPrinterStatus(PrinterGetMapping(printerNbr), &Printers[printerNbr]);
+  PrinterSetLeds(PrinterGetMapping(printerNbr), &Printers[printerNbr]);
 }
 
 bool PrinterGetClaimed(uint8_t printerNbr) {
@@ -65,4 +71,31 @@ void PrinterSetMapping(uint8_t printerNbr, uint8_t ledNbr) {
 
 uint8_t PrinterGetMapping(uint8_t printerNbr) {
   return Printers[printerNbr].led;
+}
+
+void PrinterSetLeds(uint8_t printerNbr, struct PrinterStatus *status) {
+  switch(status->current_state) {
+    case STATE_IDLE:
+      // off
+      LedSetColour(printerNbr, 0, 0, 0);
+      break;
+    case STATE_PRINTING:
+      if(status->claimed) {
+        // blue
+        LedSetColour(printerNbr, 0, 0, 255);
+      } else {
+        // red
+        LedSetColour(printerNbr, 255, 0, 0);
+      }
+      break;
+    case STATE_PAUSED:
+      // flashing yellow
+      LedSetColour(printerNbr, 255, 255, 0, true);
+      break;
+    case STATE_ERROR:
+      // flashing yellow
+      LedSetColour(printerNbr, 255, 255, 0, true);
+      break;
+  }
+  pixels.show();
 }

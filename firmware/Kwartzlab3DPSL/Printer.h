@@ -6,9 +6,3 @@ enum PrintState {
   STATE_PAUSED,
   STATE_ERROR
 };
-
-struct PrinterStatus {
-  uint8_t     led;
-  PrintState  current_state;
-  bool        claimed;
-};
